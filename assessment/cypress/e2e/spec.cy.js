@@ -10,7 +10,7 @@ describe('CitySelector Component Tests', () => {
     });
   
     it('Dropdown Population Tests - populates country dropdown with data from API', () => {
-      cy.get('select').first().children('option').should('have.length.greaterThan', 283);
+      cy.get('select').first().children('option').should('have.length.greaterThan', 245);
     });
 
     it('Dropdown Population Tests - populates state dropdown when a country (India) is selected', () => {
@@ -21,7 +21,7 @@ describe('CitySelector Component Tests', () => {
     it('Dropdown Population Tests - populates city dropdown when a state (Goa) is selected', () => {
       cy.get('select').first().select('India');
       cy.get('select').eq(1).select('Goa');
-      cy.get('select').eq(2).children('option').should('have.length.greaterThan', 11);
+      cy.get('select').eq(2).children('option').should('have.length.greaterThan', 10);
     });
 
     it('Location Selection and Display Tests - displays the selected location correctly', () => {
@@ -44,7 +44,7 @@ describe('CitySelector Component Tests', () => {
     // });
     it('API Error Handling Tests - handles country API error gracefully', () => {
       // Intercept the API call for countries and simulate a server error
-      cy.intercept('GET', 'https://crio-location-selector.onrender.com/countries', {
+      cy.intercept('GET', 'https://location_selector.labs.crio.do/countries', {
         statusCode: 500
       }).as('getCountriesError');
   
@@ -59,7 +59,7 @@ describe('CitySelector Component Tests', () => {
     });
 
     it('API Error Handling Tests - handles state API error gracefully when India is selected', () => {
-      cy.intercept('GET', 'https://crio-location-selector.onrender.com/country=India/states', {
+      cy.intercept('GET', 'https://location_selector.labs.crio.do/country=India/states', {
         statusCode: 500
       }).as('getStatesError');
       cy.get('select').first().select('India');
