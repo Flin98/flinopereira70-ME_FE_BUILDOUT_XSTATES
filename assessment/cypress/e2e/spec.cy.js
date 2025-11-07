@@ -44,7 +44,7 @@ describe('CitySelector Component Tests', () => {
     // });
     it('API Error Handling Tests - handles country API error gracefully', () => {
       // Intercept the API call for countries and simulate a server error
-      cy.intercept('GET', 'https://location_selector.labs.crio.do/countries', {
+      cy.intercept('GET', 'https://location-selector.labs.crio.do/countries', {
         statusCode: 500
       }).as('getCountriesError');
   
@@ -59,7 +59,7 @@ describe('CitySelector Component Tests', () => {
     });
 
     it('API Error Handling Tests - handles state API error gracefully when India is selected', () => {
-      cy.intercept('GET', 'https://location_selector.labs.crio.do/country=India/states', {
+      cy.intercept('GET', 'https://location-selector.labs.crio.do/country=India/states', {
         statusCode: 500
       }).as('getStatesError');
       cy.get('select').first().select('India');
