@@ -1,0 +1,88 @@
+/* src/App.css - Updated for exact requirements */
+.App {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+  .dropdown-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .dropdown-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #34495e;
+    font-size: 1rem;
+  }
+  
+  select {
+    padding: 1rem;
+    font-size: 1rem;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    background: white;
+    min-height: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  }
+  
+  select:disabled {
+    background: #ecf0f1;
+    cursor: not-allowed;
+    color: #95a5a6;
+  }
+  
+  .selection-display {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  }
+  
+  .selection-display h2 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+  }
+  
+  .selection-display p {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 500;
+  }
+  
+  .loading {
+    text-align: center;
+    color: #3498db;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
