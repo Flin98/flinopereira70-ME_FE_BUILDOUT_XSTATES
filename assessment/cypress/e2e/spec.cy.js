@@ -1,7 +1,7 @@
 describe('CitySelector Component Tests', () => {
   beforeEach(() => {
     // This will run before each test in every describe block
-    cy.visit('http://localhost:3000/'); // Adjust to the correct URL
+    cy.visit('https://cli-flinopereira70-4465-flino-s-projects.vercel.app/'); // Adjust to the correct URL
   });
 
   
@@ -49,7 +49,7 @@ describe('CitySelector Component Tests', () => {
       }).as('getCountriesError');
   
       // Visit the page after setting up the intercept
-      cy.visit('http://localhost:3000/'); // Adjust to the correct URL
+      cy.visit('https://cli-flinopereira70-4465-flino-s-projects.vercel.app/'); // Adjust to the correct URL
   
       // Wait for the intercepted API call
       cy.wait('@getCountriesError').its('response.statusCode').should('eq', 500);
